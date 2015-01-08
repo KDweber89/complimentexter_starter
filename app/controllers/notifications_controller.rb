@@ -1,8 +1,14 @@
 class NotificationsController < ApplicationController
 
-  def create
-    #add the code that will create a new notification and text it to the provided number 
+  def index
+    
   end
+
+  def create
+	  
+  end
+
+
 
   private
   def notification_params

@@ -5,17 +5,19 @@ class Notification
 
   def initialize(options={})
     self.to_number = options[:to_number]
-    account_sid = #ENV["twilio_sid"]
-    auth_token =  #ENV["twilio_token"]
+    account_sid = ENV["=------"]
+    auth_token =  ENV["-----"]
     @client = Twilio::REST::Client.new(account_sid, auth_token)
   end
 
   def text
-    # Sends a text to your phone number
+    @client.account.messages.create({
+  :from => '+12187369061'    
+})
   end
 
   def random_compliment
-    compliments = [] #enter compliments there
+    compliments = ["this is a compliment"] #enter compliments there
     # Generates a random compliment to send to the textee
   end
 end
